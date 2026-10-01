@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-10-01T23:40:11 IST" name="Support Ticket Test Suite" finished-at="2026-10-01T23:40:23 IST" duration-ms="11687">
+    <groups>
+    </groups>
+    <test started-at="2026-10-01T23:40:11 IST" name="API Tests" finished-at="2026-10-01T23:40:14 IST" duration-ms="2270">
+      <class name="supporttickets.api.TicketUpdateTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:supporttickets.api.TicketUpdateTest@38c6f217]" started-at="2026-10-01T23:40:13 IST" name="setup" finished-at="2026-10-01T23:40:13 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="shouldUpdateTicketStatusAndPriority()[pri:0, instance:supporttickets.api.TicketUpdateTest@38c6f217]" started-at="2026-10-01T23:40:13 IST" name="shouldUpdateTicketStatusAndPriority" finished-at="2026-10-01T23:40:14 IST" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldUpdateTicketStatusAndPriority -->
+      </class> <!-- supporttickets.api.TicketUpdateTest -->
+      <class name="supporttickets.api.TicketValidationTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:supporttickets.api.TicketValidationTest@5c5eefef]" started-at="2026-10-01T23:40:11 IST" name="setup" finished-at="2026-10-01T23:40:12 IST" duration-ms="350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="shouldRejectInvalidEmail()[pri:0, instance:supporttickets.api.TicketValidationTest@5c5eefef]" started-at="2026-10-01T23:40:12 IST" name="shouldRejectInvalidEmail" finished-at="2026-10-01T23:40:13 IST" duration-ms="1602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldRejectInvalidEmail -->
+      </class> <!-- supporttickets.api.TicketValidationTest -->
+      <class name="supporttickets.api.TicketQueryTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:supporttickets.api.TicketQueryTest@399f45b1]" started-at="2026-10-01T23:40:13 IST" name="setup" finished-at="2026-10-01T23:40:13 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="shouldFilterTicketsByStatusAndPriority()[pri:0, instance:supporttickets.api.TicketQueryTest@399f45b1]" started-at="2026-10-01T23:40:13 IST" name="shouldFilterTicketsByStatusAndPriority" finished-at="2026-10-01T23:40:13 IST" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldFilterTicketsByStatusAndPriority -->
+      </class> <!-- supporttickets.api.TicketQueryTest -->
+    </test> <!-- API Tests -->
+    <test started-at="2026-10-01T23:40:14 IST" name="UI Tests" finished-at="2026-10-01T23:40:23 IST" duration-ms="9379">
+      <class name="supporttickets.ui.TicketUpdateUITest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:supporttickets.ui.TicketUpdateUITest@a1153bc]" started-at="2026-10-01T23:40:18 IST" name="setup" finished-at="2026-10-01T23:40:20 IST" duration-ms="1444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="userShouldUpdateTicket()[pri:0, instance:supporttickets.ui.TicketUpdateUITest@a1153bc]" started-at="2026-10-01T23:40:20 IST" name="userShouldUpdateTicket" finished-at="2026-10-01T23:40:23 IST" duration-ms="2869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userShouldUpdateTicket -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:supporttickets.ui.TicketUpdateUITest@a1153bc]" started-at="2026-10-01T23:40:23 IST" name="tearDown" finished-at="2026-10-01T23:40:23 IST" duration-ms="373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- supporttickets.ui.TicketUpdateUITest -->
+      <class name="supporttickets.ui.CreateTicketTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:supporttickets.ui.CreateTicketTest@7b2bbc3]" started-at="2026-10-01T23:40:16 IST" name="setup" finished-at="2026-10-01T23:40:17 IST" duration-ms="1416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="userShouldCreateTicket()[pri:0, instance:supporttickets.ui.CreateTicketTest@7b2bbc3]" started-at="2026-10-01T23:40:17 IST" name="userShouldCreateTicket" finished-at="2026-10-01T23:40:18 IST" duration-ms="950" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userShouldCreateTicket -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:supporttickets.ui.CreateTicketTest@7b2bbc3]" started-at="2026-10-01T23:40:18 IST" name="tearDown" finished-at="2026-10-01T23:40:18 IST" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- supporttickets.ui.CreateTicketTest -->
+      <class name="supporttickets.ui.DashboardTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:supporttickets.ui.DashboardTest@48f2bd5b]" started-at="2026-10-01T23:40:14 IST" name="setup" finished-at="2026-10-01T23:40:15 IST" duration-ms="1733" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="dashboardShouldLoadSuccessfully()[pri:0, instance:supporttickets.ui.DashboardTest@48f2bd5b]" started-at="2026-10-01T23:40:15 IST" name="dashboardShouldLoadSuccessfully" finished-at="2026-10-01T23:40:15 IST" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dashboardShouldLoadSuccessfully -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:supporttickets.ui.DashboardTest@48f2bd5b]" started-at="2026-10-01T23:40:15 IST" name="tearDown" finished-at="2026-10-01T23:40:16 IST" duration-ms="337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- supporttickets.ui.DashboardTest -->
+    </test> <!-- UI Tests -->
+  </suite> <!-- Support Ticket Test Suite -->
+</testng-results>
