@@ -1,16 +1,145 @@
-# React + Vite
+# Support Ticket Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack support ticket management application built for a technical assignment.
 
-Currently, two official plugins are available:
+The application allows support teams to create, search, filter, sort, view, and update customer support tickets. Ticket data is persisted in a SQLite database using Prisma ORM.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Ticket Management
 
-## Expanding the ESLint configuration
+- Create support tickets
+- Required title with a maximum length of 120 characters
+- Required description
+- Customer email validation
+- Priority:
+  - Low
+  - Medium
+  - High
+- Status:
+  - Open
+  - In Progress
+  - Resolved
+- Automatically generated creation and update timestamps
+- Update ticket status and priority
+- Changes persist after page refresh
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Ticket Listing
+
+- Search tickets by title or customer email
+- Filter by status
+- Filter by priority
+- Search and filters work together
+- Sort by creation date:
+  - Newest first
+  - Oldest first
+- Server-side pagination
+- 10 tickets per page
+
+### Dashboard
+
+- Total ticket count
+- Open ticket count
+- In Progress ticket count
+- Resolved ticket count
+- Summary counts represent the complete dataset and are not affected by active filters
+
+### User Experience
+
+- Responsive desktop and mobile layout
+- Loading states
+- Empty states
+- Error states
+- Form validation
+- Clean and modern dashboard UI
+
+---
+
+# Tech Stack
+
+## Frontend
+
+- React
+- Vite
+- Tailwind CSS
+- JavaScript
+- Fetch API
+
+## Backend
+
+- Node.js
+- Express.js
+- REST API
+- Zod for backend validation
+
+## Database
+
+- SQLite
+- Prisma ORM
+
+## Testing
+
+- Vitest
+- Supertest
+
+## Development Tools
+
+- Git
+- GitHub
+- Nodemon
+
+---
+
+# Project Structure
+
+```text
+Support-Tickets/
+│
+├── client/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── tickets/
+│   │   │
+│   │   ├── pages/
+│   │   │
+│   │   ├── services/
+│   │   │   └── ticketApi.js
+│   │   │
+│   │   └── ...
+│   │
+│   └── package.json
+│
+├── server/
+│   ├── prisma/
+│   │   ├── schema.prisma
+│   │   ├── seed.js
+│   │   └── migrations/
+│   │
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── ticketController.js
+│   │   │
+│   │   ├── routes/
+│   │   │   └── ticketRoutes.js
+│   │   │
+│   │   ├── validators/
+│   │   │   └── ticketValidator.js
+│   │   │
+│   │   ├── middleware/
+│   │   │   └── errorHandler.js
+│   │   │
+│   │   ├── lib/
+│   │   │   └── prisma.js
+│   │   │
+│   │   ├── app.js
+│   │   └── server.js
+│   │
+│   ├── tests/
+│   │   └── ticket.test.js
+│   │
+│   └── package.json
+│
+├── README.md
+└── .gitignore
