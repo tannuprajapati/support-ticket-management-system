@@ -1,148 +1,152 @@
-# Support Ticket Dashboard
+# Support Ticket Management System
 
-A full-stack Support Ticket Management application that helps support teams create, track, search, filter, sort, and update customer support requests.
+A full-stack Support Ticket Management System built as a technical assignment for managing customer support requests.
 
-The project includes a React frontend, Node.js/Express backend, Prisma ORM with SQLite database, REST APIs, and automated API and UI testing using Java, Selenium WebDriver, TestNG, and Maven.
+The application allows support teams to create, search, filter, sort, view, and update support tickets while maintaining persistent data in PostgreSQL.
 
----
+## Live Demo
 
-## 📌 Project Overview
+**Frontend:**  
+https://support-ticket-management-system-2.onrender.com
 
-A small company previously managed customer support requests using spreadsheets. This project provides a centralized web application for managing support tickets efficiently.
+**Backend API:**  
+https://support-ticket-management-system-1.onrender.com/api/tickets
 
-The application allows support team members to:
-
-- Create new support tickets
-- View existing tickets
-- Search tickets
-- Filter tickets by status
-- Filter tickets by priority
-- Sort tickets
-- Navigate tickets using pagination
-- View individual ticket details
-- Update ticket status
-- Update ticket priority
-- View ticket summary statistics
-
-The project also includes automated testing for both backend APIs and frontend user workflows.
+**GitHub Repository:**  
+https://github.com/tannuprajapati/support-ticket-management-system
 
 ---
 
-## ✨ Features
+## Features
 
-### Dashboard
+### 1. Create Support Tickets
 
-The dashboard provides:
-
-- Total ticket count
-- Open ticket count
-- In-progress ticket count
-- Resolved ticket count
-- Ticket listing
-- Search
-- Status filtering
-- Priority filtering
-- Sorting
-- Pagination
-
-### Create Ticket
-
-Users can create a new support ticket with:
+Users can create support tickets with:
 
 - Title
-- Customer email
 - Description
+- Customer email
 - Priority
+- Status
+- Automatically generated created timestamp
+- Automatically generated updated timestamp
 
-Supported priorities:
+### 2. Ticket Validation
 
-- LOW
-- MEDIUM
-- HIGH
+Validation is implemented on both the frontend and backend.
 
-### View Ticket
+Supported validation includes:
 
-Users can open a ticket and view its details.
+- Required title
+- Maximum 120-character title
+- Required description
+- Valid customer email
+- Valid priority
+- Valid status
+- Meaningful validation error messages
 
-### Update Ticket
+### 3. Ticket Listing
 
-Users can update:
+The dashboard supports:
 
-- Ticket status
-- Ticket priority
-
-Supported statuses:
-
-- OPEN
-- IN_PROGRESS
-- RESOLVED
-
-### Backend API
-
-The backend provides RESTful APIs for:
-
-- Listing tickets
-- Searching tickets
-- Filtering tickets
-- Sorting tickets
+- Search by ticket title
+- Search by customer email
+- Filter by status
+- Filter by priority
+- Sort by creation date
+- Newest-first sorting
+- Oldest-first sorting
 - Pagination
-- Getting ticket details
-- Creating tickets
-- Updating tickets
-- Getting ticket summary
+- 10 tickets per page
 
-### Automated Testing
+Search, filtering, sorting, and pagination are handled by the backend API.
 
-The project includes:
+### 4. View and Update Tickets
 
-- API automation tests
-- Selenium UI automation tests
-- TestNG test suite
-- Maven-based test execution
+Users can:
+
+- Open a ticket
+- View complete ticket details
+- Update ticket status
+- Update ticket priority
+
+Changes are persisted in PostgreSQL and remain after refreshing the application.
+
+### 5. Dashboard Summary
+
+The dashboard displays:
+
+- Total number of tickets
+- Open tickets
+- In Progress tickets
+- Resolved tickets
+
+Summary counts represent the complete dataset and are not affected by active search or filters.
+
+### 6. Responsive UI
+
+The application is designed to work across:
+
+- Desktop
+- Tablet
+- Mobile
+
+The interface also includes:
+
+- Loading states
+- Empty states
+- Error states
+- Form validation feedback
 
 ---
 
-## 🛠️ Tech Stack
+# Technology Stack
 
-### Frontend
+## Frontend
 
 - React
-- JavaScript
-- Tailwind CSS
 - Vite
+- JavaScript
+- CSS / Tailwind CSS
+- Fetch API
 
-### Backend
+## Backend
 
 - Node.js
 - Express.js
 - REST API
-- CORS
-- Zod
-
-### Database
-
-- SQLite
 - Prisma ORM
 
-### Testing
+## Database
 
-- Java 21
+- PostgreSQL
+- Neon PostgreSQL
+
+## Testing
+
+### API Tests
+
+- Java
+- Maven
+- TestNG
+- REST API testing
+
+### UI Tests
+
 - Selenium WebDriver
+- Java
 - TestNG
 - Maven
-- Google Chrome
-- ChromeDriver
 
-### Development Tools
+## Deployment
 
-- Git
 - GitHub
-- Visual Studio Code
-- npm
+- Render
+- Neon PostgreSQL
 
 ---
 
-## 📂 Project Structure
+# Project Structure
 
 ```text
 Support-Tickets/
@@ -150,38 +154,32 @@ Support-Tickets/
 ├── client/
 │   ├── src/
 │   │   ├── components/
-│   │   │   └── tickets/
+│   │   ├── hooks/
 │   │   ├── pages/
 │   │   ├── services/
-│   │   └── App.jsx
-│   │
+│   │   └── utils/
 │   ├── package.json
-│   └── ...
+│   └── vite.config.js
 │
 ├── server/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── middleware/
-│   │   ├── routes/
-│   │   ├── validators/
-│   │   ├── app.js
-│   │   └── server.js
-│   │
 │   ├── prisma/
+│   │   ├── migrations/
 │   │   ├── schema.prisma
 │   │   └── seed.js
 │   │
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   └── server.js
+│   │
 │   ├── package.json
-│   └── ...
+│   └── .env
 │
 ├── automation-tests/
 │   ├── src/
-│   │   └── test/
-│   │       └── java/
-│   │
 │   ├── pom.xml
-│   ├── testng.xml
-│   └── target/
+│   └── testng.xml
 │
-├── README.md
-└── .gitignore
+├── .gitignore
+└── README.md
