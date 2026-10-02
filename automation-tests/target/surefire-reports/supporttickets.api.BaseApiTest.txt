@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: TestSuite
+Test set: supporttickets.api.BaseApiTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.38 s -- in TestSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.481 s -- in supporttickets.api.BaseApiTest
