@@ -1,8 +1,0 @@
-supporttickets\api\BaseApiTest.class
-supporttickets\ui\DashboardTest.class
-supporttickets\api\TicketUpdateTest.class
-supporttickets\api\TicketQueryTest.class
-supporttickets\ui\TicketUpdateUITest.class
-supporttickets\api\TicketValidationTest.class
-supporttickets\ui\BaseUiTest.class
-supporttickets\ui\CreateTicketTest.class
